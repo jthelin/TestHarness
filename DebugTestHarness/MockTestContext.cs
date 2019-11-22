@@ -4,8 +4,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.IO;
-using System.Linq;
-using System.Text;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests
@@ -27,6 +25,11 @@ namespace Tests
         public override void WriteLine(string format, params object[] args)
         {
             Console.WriteLine(format, args);
+        }
+
+        public override void WriteLine(string msg)
+        {
+            Console.WriteLine(msg);
         }
 
         public override void AddResultFile(string fileName)
